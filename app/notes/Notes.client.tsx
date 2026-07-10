@@ -9,7 +9,7 @@ import NoteList from "@/components/NoteList/NoteList";
 import Modal from "@/components/Modal/Modal";
 import Pagination from "@/components/Pagination/Pagination";
 import SearchBox from "@/components/SearchBox/SearchBox";
-import { fetchNotes } from "@/lib/api";
+import { fetchNotes } from "@/lib/api/notes";
 import styles from "./Notes.client.module.css";
 
 export function NotesClient() {
@@ -31,6 +31,7 @@ export function NotesClient() {
     queryKey: ["notes", page, perPage, search],
     queryFn: () => fetchNotes({ page, perPage, search }),
     enabled: canWorkWithNotes,
+    refetchOnMount: false,
     placeholderData: keepPreviousData,
   });
 

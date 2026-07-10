@@ -4,7 +4,7 @@ import { ErrorMessage, Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { createNote } from "@/lib/api";
+import { createNote } from "@/lib/api/notes";
 import { NOTE_TAGS, type NewNotePayload } from "@/types/note";
 import styles from "./NoteForm.module.css";
 

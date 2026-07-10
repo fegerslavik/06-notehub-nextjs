@@ -7,21 +7,11 @@ interface NoteCardProps {
   onDelete?: (id: string) => void;
 }
 
-const colorLabels: Record<NonNullable<Note["color"]>, string> = {
-  cyan: "Cyan",
-  violet: "Violet",
-  amber: "Amber",
-  emerald: "Emerald",
-};
-
 export function NoteCard({ note, onDelete }: NoteCardProps) {
-  const colorClass = note.color ? styles[note.color] : "";
-
   return (
-    <article className={`${styles.card} ${colorClass}`}>
+    <article className={styles.card}>
       <div className={styles.topline}>
-        <span className={styles.badge}>{note.category}</span>
-        {note.pinned ? <span className={styles.pin}>Pinned</span> : null}
+        <span className={styles.badge}>{note.tag}</span>
       </div>
 
       <Link className={styles.title} href={`/notes/${note.id}`}>
@@ -31,7 +21,7 @@ export function NoteCard({ note, onDelete }: NoteCardProps) {
       <p className={styles.content}>{note.content}</p>
 
       <div className={styles.footer}>
-        <span>{note.color ? colorLabels[note.color] : "Note"}</span>
+        <span>{note.tag}</span>
         <span>{new Date(note.updatedAt).toLocaleDateString("uk-UA")}</span>
       </div>
 

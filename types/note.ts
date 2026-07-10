@@ -15,9 +15,6 @@ export interface Note {
   tag: NoteTag;
   createdAt: string;
   updatedAt: string;
-  category?: string;
-  color?: string;
-  pinned?: boolean;
 }
 
 export interface NewNotePayload {
