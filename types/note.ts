@@ -1,0 +1,29 @@
+export const NOTE_TAGS = [
+  "Work",
+  "Personal",
+  "Meeting",
+  "Shopping",
+  "Todo",
+] as const;
+
+export type NoteTag = (typeof NOTE_TAGS)[number];
+
+export interface Note {
+  id: string;
+  title: string;
+  content: string;
+  tag: NoteTag;
+  createdAt: string;
+  updatedAt: string;
+  category?: string;
+  color?: string;
+  pinned?: boolean;
+}
+
+export interface NewNotePayload {
+  title: string;
+  content: string;
+  tag: NoteTag;
+}
+
+export type NoteFormValues = NewNotePayload;

@@ -1,0 +1,69 @@
+@import "modern-normalize/modern-normalize.css";
+
+:root {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #1f2937;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  width: 100%;
+}
+
+.app-main {
+  flex: 1;
+  display: block;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 16px 20px;
+}
+
+main {
+  display: block;
+}
